@@ -13,6 +13,7 @@ export const Database =async()=>{
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })
+       
         console.log("Database is connected")
     } catch (error) {
         console.log("Database is not connected")

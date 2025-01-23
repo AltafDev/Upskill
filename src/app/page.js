@@ -10,8 +10,7 @@ import {
 export default function page() {
   return (
     <>
-       <ClerkProvider>
-     
+       <ClerkProvider>   
           <SignedOut>
             <SignInButton />
           </SignedOut>
