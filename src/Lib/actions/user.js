@@ -14,12 +14,12 @@ export const CreateOrUpdateUser = async (
   try {
     await Database();
     const user = await User.findOneAndUpdate(
-      { clekid: id },
+      { clerkId: id },
       {
         $set: {
-            firstname: first_name,
-            lastname: last_name,
-            avator: image_url,
+          firstName: first_name,
+          lastName: last_name,
+          avatar: image_url,
           email: email_addresses[0].email_address,
           username:username
         },
@@ -35,7 +35,7 @@ export const CreateOrUpdateUser = async (
 export const DeleteUser = async (id) => {
   try {
     await Database();
-    await User.findOneAndDelete({ clekid: id });
+    await User.findOneAndDelete({ clerkId: id });
   } catch (error) {
     console.log('Error deleting user:', error);
   }
