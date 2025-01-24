@@ -26,15 +26,7 @@ const userSchema = new mongoose.Schema(
     username:{
       type: String,
       required: true
-    },
-    followers: {
-      type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-      default: [],
-    },
-    following: {
-      type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
-      default: [],
-    },
+    }
   },
   { timestamps: true }
 );
