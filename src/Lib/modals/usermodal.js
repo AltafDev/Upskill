@@ -28,7 +28,8 @@ const userschema=mongoose.Schema({
         
     }
    },
-{timeStamps:true}
+{timestamps:true}
 )
-const User = mongoose.models.User || mongoose.model('Upskill', userschema);
-export default User
+const User = mongoose.models.User || mongoose.model('User', userschema);
+
+export default User;
