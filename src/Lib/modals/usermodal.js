@@ -26,6 +26,10 @@ const userschema=mongoose.Schema({
         type:String,
         required:true,
         
+    },
+    avator:{
+        type:String,
+        required:true
     }
    },
 {timestamps:true}
