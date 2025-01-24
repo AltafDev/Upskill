@@ -30,5 +30,5 @@ const userschema=mongoose.Schema({
    },
 {timeStamps:true}
 )
-const User =mongoose.model("Upskill data",userschema)
+const User = mongoose.models.User || mongoose.model('Upskill', userschema);
 export default User
