@@ -3,7 +3,7 @@ let intialized=false
 
 export const Database =async()=>{
     mongoose.set("strictQuery",true)
-    if(intialized){
+    if(!intialized){
         console.log("Database is already conected")
         return
     }
@@ -13,9 +13,9 @@ export const Database =async()=>{
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })
-      
-        console.log("Database is connected")
         intialized=true
+        console.log("Database is connected")
+        
     } catch (error) {
         console.log("Database is not connected")
     }
